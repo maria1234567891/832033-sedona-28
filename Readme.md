@@ -1,6 +1,6 @@
 # Личный проект «Седона»
 
-* Студент: [Мария ](https://up.htmlacademy.ru/htmlcss/28/user/832033).
+* Студент: [Мария](https://up.htmlacademy.ru/htmlcss/28/user/832033).
 * Наставник: `Неизвестно`.
 
 ---
