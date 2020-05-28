@@ -3,33 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="header">
       <a>
         <img src="img/logo_Sedona.svg" width="138" height="70" alt="Логотип City of Sedona">
       </a>
-      <nav>
-        <ul>
+      <nav class="main_navigation">
+        <ul class="site_navigation">
           <li><a href="">Информация</a></li>
           <li><a href="">Фото и видео</a></li>
           <li><a href="">Карта штата</a></li>
-          <li><a href="inner.html">Гостиницы</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
-      <section>
+      <section class="header_Sedona">
         <img src="img/intro-welcome.svg" width="456" height="350" alt="Welcome">
       </section>
     </header>
     <main>
-      <section>
-        <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <section class="advantages">
+        <h2>Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
-      <section>
+      <section class="dates">
         <h2>Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-        <a>Поиск гостиницы в Седоне</a>
+        <p>Укажите предполагаемые даты поездки, <br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+        <a class="search">Поиск гостиницы в Седоне</a>
+        <div class="popup hidden">
         <form action="https://echo.htmlacademy.ru" method="post">
           <p><label for="arrival_date">Дата заезда:</label><input type="text" name="arrival_date" id="arrival_date" placeholder="24 апреля 2017" required></input></p>
           <p><label for="departure_date">Дата выезда:</label><input type="text" name="departure_date" id="departure_date" placeholder="4 июля 2017" required></input></p>
@@ -37,17 +41,20 @@
           <p><label for="children">Дети</label><input type="number" name="children" id="children"></input></p>
           <button type="submit">Найти</button>
         </form>
+      </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
+      <div class="footer_contacts">
         <p>#VisitSedona<br>
         тел: +7(495)666-02-66</p>
-        <ul>
-          <li><a href="#">Твиттер</a></li>
-          <li><a href="#">Фейсбук</a></li>
-          <li><a href="#">Youtube</a></li>
+      </div>
+        <ul class="social_buttons">
+          <li><a href="#" class="social_button twitter"><span>Твиттер</span></a></li>
+          <li><a href="#" class="social_button facebook"><span>Фейсбук</span></a></li>
+          <li><a href="#" class="social_button youtube"><span>Youtube</span></a></li>
         </ul>
-      <a href="https://htmlacademy.ru/intensive/htmlcss"><p>Website by</p><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy"></a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss"><p class="copyright">Website by</p><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy"></a>
     </footer>
   </body>
 </html>
