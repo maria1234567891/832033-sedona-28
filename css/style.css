@@ -68,14 +68,14 @@ img{
 .advantages{
   text-align: center;
 }
-.advantages h2,{
+.advantages_header{
   font-size: 21px;
 }
 .dates{
   text-align: center;
   line-height: 24px;
 }
-.dates h2{
+.dates_header{
   font-size: 30px;
 }
 .search{
@@ -108,28 +108,19 @@ img{
 .social_button:active{
   background-color: var(--basic_blue_active);
 }
-.twitter{
-  background-image: url("../img/twitter.svg");
-  background-repeat: no-repeat;
-}
-.facebook{
-  background-image: url("../img/fb-icon.svg");
-  background-repeat: no-repeat;
-}
-.youtube{
-  background-image: url("../img/youtube.svg");
-  background-repeat: no-repeat;
+.social_button:active > svg{
+  opacity: 0.3;
 }
 .hotels_list{
   list-style: none;
 }
-.hotels_list h3{
+.hotels_list_header{
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: var(--basic_black);
 }
-.hotels_list p{
+.hotels_list_text{
   font-size: 14px;
   line-height: 21px;
   color: var(--basic_text);
