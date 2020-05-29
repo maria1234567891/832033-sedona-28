@@ -12,6 +12,7 @@
   --basic_neutral: #F2F2F2;
   --basic_neutral_hover: #EBEBEB;
   --basic_neutral_border: #E5E5E5;
+  --basic_neutral_active: #BDBBBC;
   --basic_white_transparent: rgba(225, 225, 225, 0.3);
 }
 
@@ -108,7 +109,13 @@ img{
 .social_button:active{
   background-color: var(--basic_blue_active);
 }
-.social_button:active > svg{
+.twitter:active > img{
+  opacity: 0.3;
+}
+.facebook:active > svg > g{
+  opacity: 0.3;
+}
+.youtube:active > svg > path{
   opacity: 0.3;
 }
 .hotels_list{
@@ -163,4 +170,10 @@ img{
   font-size: 14px;
   line-height: 26px;
   color: var(--basic_black);
+}
+.logo_container:hover > path{
+  fill: var(--basic_blue);
+}
+.logo_container:active > path{
+  fill: var(--basic_neutral_active);
 }
