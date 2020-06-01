@@ -28,6 +28,20 @@ body{
   text-transform: uppercase;
   background-color: var(--basic_white);
 }
+.page{
+  height: 100%;
+}
+.page_body{
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+.container{
+  width: 1280px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 a{
   text-decoration: none;
 }
@@ -38,20 +52,45 @@ img{
 .hidden{
   display: none;
 }
-.header_Sedona{
-  background-color: var(--basic_neutral);
-  background-image: url("../img/background_photo.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-}
 .header{
   text-align: center;
 }
+.logo_Sedona_container{
+  width: 1280px;
+}
+.logo_Sedona{
+  position: relative;
+  margin: 0 auto;
+}
 .main_navigation{
-  background-color: var(--basic_white);
+  background-color: transparent;
 }
 .site_navigation{
   list-style: none;
+  width: 1055px;
+  margin: 0 auto;
+  padding: 0px;
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+  display: flex;
+  justify-content: space-between;
+}
+.site_navigation li{
+  width: 227px;
+  padding: 14px 0px;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+  justify-self: start;
+}
+.site_navigation li:nth-child(3){
+    margin-left: auto;
+}
+.align_left{
+  text-align: left;
+}
+.align_right{
+  text-align: right;
+
 }
 .site_navigation a{
   font-weight: 700;
@@ -66,23 +105,63 @@ img{
 .site_navigation a:active{
   color: var(--basic_blue_active);
 }
+.header_Sedona{
+  background-color: var(--basic_neutral);
+  width: 100%;
+  background-image: url("../img/background_photo.jpg");
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
+}
+.header_Sedona img{
+  padding-top: 76px;
+  padding-bottom: 81px;
+}
 .advantages{
   text-align: center;
+  padding-top: 39px;
+  padding-bottom: 37px;
+  outline: 5px solid rgba(255, 0, 255, 0.3);
+  outline-offset: -5px;
 }
 .advantages_header{
+  width: 470px;
+  margin: 0 auto;
   font-size: 21px;
+  padding-bottom: 43px;
+}
+.advantages_text{
+  margin: 0px;
 }
 .dates{
   text-align: center;
   line-height: 24px;
+  outline: 5px solid rgba(0, 0, 255, 0.3);
+  outline-offset: -5px;
 }
 .dates_header{
+  margin: 0px;
+  padding: 0px;
   font-size: 30px;
+  padding-top: 58px;
+}
+.dates_p{
+  margin: 0px;
+  padding: 0px;
+  padding-top: 27px;
+  padding-bottom: 45px;
 }
 .search{
   color: var(--basic_white);
   font-size: 21px;
   line-height: 24px;
+  width: 568px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: block;
   background-color: var(--basic_brown);
 }
 .search:hover{
@@ -92,16 +171,45 @@ img{
   background-color: var(--basic_brown_active);
   color: var(--basic_white_transparent);
 }
+.footer_container{
+  outline: 5px solid rgba(0, 0, 255, 0.3);
+  outline-offset: -5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.visit_Sedona{
+  margin: 0 auto;
+  width: 222px;
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
+}
 .footer_contacts{
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  width: 340px;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+}
+.social_buttons_container{
+    width: 420px;
+    justify-self: center;
+    outline: 5px solid rgba(255, 0, 0, 0.3);
+    outline-offset: -5px;
 }
 .social_buttons{
   list-style: none;
+  padding: 0;
+  width: 150px;
+  margin: 0 auto;
+  outline: 5px solid rgba(255, 255, 0, 0.3);
+  outline-offset: -5px;
 }
 .social_button{
   background-color: var(--basic_blue);
+  display: block;
+  width: 46px;
+  height: 48px;
 }
 .social_button:hover{
   background-color: var(--basic_blue_hover);
@@ -118,23 +226,82 @@ img{
 .youtube:active > svg > path{
   opacity: 0.3;
 }
+.copyright_container{
+  width: 398px;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+  justify-self: end;
+}
+.copyright_wrapper{
+  width: 196px;
+  margin: 0 auto;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+}
+.copyright{
+  font-size: 14px;
+  line-height: 26px;
+  margin: 0;
+  color: var(--basic_black);
+}
 .hotels_list{
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.hotels_list_header{
+.hotels_item{
+  display: grid;
+  grid-template-columns: 135px 1fr;
+  align-content: start;
+  gap: 28px;
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+}
+.item_information{
+  outline: 5px solid rgba(255, 255, 0, 0.3);
+  outline-offset: -5px;
+}
+.hotel_item_header{
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: var(--basic_black);
+  padding: 0;
+  margin: 0;
 }
-.hotels_list_text{
+.hotel_item_text{
   font-size: 14px;
   line-height: 21px;
   color: var(--basic_text);
+  padding: 0;
+  margin: 0;
+}
+.part_1{
+  display: flex;
+  justify-content: space-between;
+}
+.part_2{
+  display: grid;
+  grid-template-columns: min-content min-content;
+  align-content: start;
+  gap: 6px;
+}
+.part_2 .hotel_item_text{
+  width: 110px;
+}
+.part_3{
+  display: grid;
+  grid-template-columns: min-content min-content 1fr;
+  align-content: start;
+  gap: 6px;
 }
 .more_information{
+  text-align: center;
   font-size: 14px;
   line-height: 21px;
+  width: 110px;
+  padding: 0;
+  margin: 0;
   color: var(--basic_white);
   background-color: var(--basic_blue);
 }
@@ -145,8 +312,12 @@ img{
   background-color: var(--basic_blue_active);
 }
 .reservation{
+  text-align: center;
   font-size: 14px;
   line-height: 21px;
+  width: 142px;
+  padding: 0;
+  margin: 0;
   color: var(--basic_white);
   background-color: var(--basic_brown);
 }
@@ -156,20 +327,25 @@ img{
 .reservation:active{
   background-color: var(--basic_brown_active);
 }
+.stars{
+  list-style: none;
+}
 .star{
     background-image: url("../img/star.svg");
     background-repeat: no-repeat;
+    width: 19px;
+    height: 17px;
 }
 .rating{
+  text-align: center;
   font-size: 14px;
   line-height: 21px;
+  width: 110px;
+  padding: 0;
+  margin: 0;
+  justify-self: end;
   color: var(--basic_text_lighter);
   background-color: var(--basic_neutral);
-}
-.copyright{
-  font-size: 14px;
-  line-height: 26px;
-  color: var(--basic_black);
 }
 .logo_container:hover > path{
   fill: var(--basic_blue);
