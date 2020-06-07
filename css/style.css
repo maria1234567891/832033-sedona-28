@@ -13,7 +13,11 @@
   --basic_neutral_hover: #EBEBEB;
   --basic_neutral_border: #E5E5E5;
   --basic_neutral_active: #BDBBBC;
-  --basic_white_transparent: rgba(225, 225, 225, 0.3);
+  --basic_neutral_numbers: #A9A9A9;
+  --basic_background_Sedona: #778591;
+  --basic_white_transparent: rgba(255, 255, 255, 0.3);
+  --basic_white_transparent2: rgba(255, 255, 255, 0.9);
+  --basic_black_transparent: rgba(0, 0, 0, 0.3);
 }
 
 body{
@@ -26,7 +30,7 @@ body{
   font-weight: 400;
   color: var(--basic_text);
   text-transform: uppercase;
-  background-color: var(--basic_white);
+  background-color: var(--basic_neutral);
 }
 .page{
   height: 100%;
@@ -56,41 +60,38 @@ img{
   text-align: center;
 }
 .logo_Sedona_container{
-  width: 1280px;
+  position: absolute;
+  left: 50%;
+  margin-left: -69px;
 }
 .logo_Sedona{
   position: relative;
   margin: 0 auto;
 }
 .main_navigation{
-  background-color: transparent;
+    background-color: var(--basic_white);
 }
 .site_navigation{
   list-style: none;
   width: 1055px;
   margin: 0 auto;
   padding: 0px;
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
   display: flex;
   justify-content: space-between;
 }
 .site_navigation li{
   width: 227px;
   padding: 14px 0px;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
   justify-self: start;
 }
 .site_navigation li:nth-child(3){
-    margin-left: auto;
+  margin-left: auto;
 }
 .align_left{
   text-align: left;
 }
 .align_right{
   text-align: right;
-
 }
 .site_navigation a{
   font-weight: 700;
@@ -106,14 +107,12 @@ img{
   color: var(--basic_blue_active);
 }
 .header_Sedona{
-  background-color: var(--basic_neutral);
+  background-color: var(--basic_background_Sedona);
   width: 100%;
   background-image: url("../img/background_photo.jpg");
   background-position: top center;
   background-size: 100%;
   background-repeat: no-repeat;
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
 }
 .header_Sedona img{
   padding-top: 76px;
@@ -123,8 +122,7 @@ img{
   text-align: center;
   padding-top: 39px;
   padding-bottom: 37px;
-  outline: 5px solid rgba(255, 0, 255, 0.3);
-  outline-offset: -5px;
+  background-color: var(--basic_white);
 }
 .advantages_header{
   width: 470px;
@@ -138,8 +136,7 @@ img{
 .dates{
   text-align: center;
   line-height: 24px;
-  outline: 5px solid rgba(0, 0, 255, 0.3);
-  outline-offset: -5px;
+  background-color: var(--basic_white);
 }
 .dates_header{
   margin: 0px;
@@ -172,42 +169,42 @@ img{
   color: var(--basic_white_transparent);
 }
 .footer_container{
-  outline: 5px solid rgba(0, 0, 255, 0.3);
-  outline-offset: -5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--basic_white_transparent2);
 }
 .visit_Sedona{
   margin: 0 auto;
+  margin-top: 21px;
+  margin-bottom: 36px;
   width: 222px;
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
 }
 .footer_contacts{
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   width: 340px;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
 }
 .social_buttons_container{
-    width: 420px;
-    justify-self: center;
-    outline: 5px solid rgba(255, 0, 0, 0.3);
-    outline-offset: -5px;
+  width: 420px;
+  justify-self: center;
+  display: flex;
+  align-items: center;
 }
 .social_buttons{
   list-style: none;
   padding: 0;
   width: 150px;
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
-  outline: 5px solid rgba(255, 255, 0, 0.3);
-  outline-offset: -5px;
 }
 .social_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--basic_blue);
-  display: block;
+  text-align: center;
   width: 46px;
   height: 48px;
 }
@@ -228,38 +225,42 @@ img{
 }
 .copyright_container{
   width: 398px;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
   justify-self: end;
 }
 .copyright_wrapper{
-  width: 196px;
+  width: 197px;
   margin: 0 auto;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
+  margin-top: 28px;
+  display: flex;
 }
 .copyright{
   font-size: 14px;
   line-height: 26px;
   margin: 0;
+  margin-right: 8px;
   color: var(--basic_black);
+}
+.hotels{
+  background-color: var(--basic_white);
+}
+.container_hotels{
+  width: 1054px;
+  margin: 0 auto;
 }
 .hotels_list{
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: var(--basic_white);
 }
 .hotels_item{
   display: grid;
   grid-template-columns: 135px 1fr;
   align-content: start;
   gap: 28px;
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
 }
 .item_information{
-  outline: 5px solid rgba(255, 255, 0, 0.3);
-  outline-offset: -5px;
+  margin-bottom: 61px;
 }
 .hotel_item_header{
   font-size: 21px;
@@ -268,6 +269,13 @@ img{
   color: var(--basic_black);
   padding: 0;
   margin: 0;
+  margin-top: -5px;
+}
+.hotel_item_header:hover{
+  color: var(--basic_blue);
+}
+.hotel_item_header:active{
+  color: var(--basic_black_transparent);
 }
 .hotel_item_text{
   font-size: 14px;
@@ -279,12 +287,14 @@ img{
 .part_1{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 .part_2{
   display: grid;
   grid-template-columns: min-content min-content;
   align-content: start;
   gap: 6px;
+  margin-bottom: 11px;
 }
 .part_2 .hotel_item_text{
   width: 110px;
@@ -300,7 +310,7 @@ img{
   font-size: 14px;
   line-height: 21px;
   width: 110px;
-  padding: 0;
+  padding: 3px 0;
   margin: 0;
   color: var(--basic_white);
   background-color: var(--basic_blue);
@@ -316,7 +326,7 @@ img{
   font-size: 14px;
   line-height: 21px;
   width: 142px;
-  padding: 0;
+  padding: 3px 0;
   margin: 0;
   color: var(--basic_white);
   background-color: var(--basic_brown);
@@ -329,19 +339,20 @@ img{
 }
 .stars{
   list-style: none;
+  display: flex;
 }
 .star{
-    background-image: url("../img/star.svg");
-    background-repeat: no-repeat;
-    width: 19px;
-    height: 17px;
+  background-image: url("../img/star.svg");
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 17px;
 }
 .rating{
   text-align: center;
-  font-size: 14px;
   line-height: 21px;
   width: 110px;
   padding: 0;
+  padding-top: 4px;
   margin: 0;
   justify-self: end;
   color: var(--basic_text_lighter);
@@ -352,4 +363,208 @@ img{
 }
 .logo_container:active > path{
   fill: var(--basic_neutral_active);
+}
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.popup{
+  width: 568px;
+  background-color: var(--basic_white);
+  margin: 0 auto;
+  position: absolute;
+  top: 1052px;
+  left: 50%;
+  margin-left: -284px;
+}
+.form{
+  width: 100%;
+}
+.form input{
+  font: inherit;
+  color: var(--basic_black);
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--basic_neutral);
+  padding-left: 13px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  box-sizing: border-box;
+}
+.arrival_date_input:hover{
+    background-color: var(--basic_neutral_hover);
+}
+.arrival_date_input:active{
+  background-color: var(--basic_white);
+  border: 2px solid #E5E5E5;
+}
+.departure_date_input:hover{
+    background-color: var(--basic_neutral_hover);
+}
+.departure_date_input:active{
+  background-color: var(--basic_white);
+  border: 2px solid #E5E5E5;
+}
+.popup_container{
+  width: 458px;
+  margin: 0 auto;
+  margin-top: 55px;
+}
+.popup_container p{
+  padding: 0;
+}
+.arrival_container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 29px;
+  position: relative;
+}
+.departure_container{
+  display: flex;
+  margin: 0;
+  margin-bottom: 29px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.numbers{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 54px;
+}
+.arrival_date, .departure_date, .adults, .children{
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  width: 112px;
+  display: block;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.children{
+  width: 118px;
+  padding-left: 53px;
+  box-sizing: border-box;
+}
+.children_input, .adults_input{
+  width: 38px;
+  position: relative;
+}
+.arrival_date_input, .departure_date_input{
+  width: 346px;
+  color: inherit;
+}
+.arrival_container > svg{
+  position: absolute;
+  right: 9px;
+  top: 7px;
+}
+.departure_container > svg{
+  position: absolute;
+  right: 9px;
+  top: 7px;
+}
+.arrival_container > svg:hover > path{
+  fill: var(--basic_black);
+}
+.arrival_container > svg:active > path{
+  fill: var(--basic_blue);
+}
+.departure_container > svg:hover > path{
+  fill: var(--basic_black);
+}
+.departure_container > svg:active > path{
+  fill: var(--basic_blue);
+}
+.submit{
+  display: block;
+  width: 100%;
+  color: var(--basic_white);
+  font: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: var(--basic_blue);
+}
+.submit:hover{
+  background-color: var(--basic_blue_hover);
+}
+.submit:active{
+  background-color: var(--basic_blue_active);
+  color: var(--basic_white_transparent);
+}
+.adults_container{
+  display: flex;
+}
+.children_container{
+  display: flex;
+}
+.minus_container{
+  width: 38px;
+  height: 38px;
+  background-color: var(--basic_neutral);
+  position: relative;
+}
+.minus_container:hover .minus{
+  background-color: var(--basic_black);
+}
+.minus_container:active .minus{
+  background-color: var(--basic_blue);
+}
+.plus_container{
+  width: 38px;
+  height: 38px;
+  background-color: var(--basic_neutral);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plus_container:hover .minus{
+  background-color: var(--basic_black);
+}
+.plus_container:active .minus{
+  background-color: var(--basic_blue);
+}
+.plus_container:hover .plus{
+  background-color: var(--basic_black);
+}
+.plus_container:active .plus{
+  background-color: var(--basic_blue);
+}
+.minus{
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5px;
+  left: 50%;
+  margin-left: -6px;
+  width: 12px;
+  height: 3px;
+  background-color: var(--basic_neutral_numbers);
+}
+.plus{
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  left: 50%;
+  margin-left: -1.5px;
+  width: 3px;
+  height: 12px;
+  background-color: var(--basic_neutral_numbers);
+}
+.number_input{
+  display: flex;
 }
