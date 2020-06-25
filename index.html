@@ -8,8 +8,8 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page_body">
+    <div class="container">
     <header class="header">
-        <div class="container">
           <div class="logo_Sedona_container">
             <a>
               <img src="img/logo_Sedona.svg" width="138" height="70" alt="Логотип City of Sedona">
@@ -17,13 +17,12 @@
           </div>
           <nav class="main_navigation">
             <ul class="site_navigation">
-              <li class="align_left"><a href="" class="menu active">Информация</a></li>
-              <li class="align_left"><a href="" class="menu">Фото и видео</a></li>
-              <li class="align_right"><a href="" class="menu">Карта штата</a></li>
-              <li class="align_right"><a href="hotels.html" class="menu">Гостиницы</a></li>
+              <li class="site_navigation_align_left"><a>Информация</a></li>
+              <li class="site_navigation_align_left"><a href="">Фото и видео</a></li>
+              <li class="site_navigation_align_right"><a href="">Карта штата</a></li>
+              <li class="site_navigation_align_right"><a href="hotels.html">Гостиницы</a></li>
             </ul>
           </nav>
-        </div>
       <section class="header_Sedona_container">
           <div class="header_Sedona">
             <img src="img/intro-welcome.svg" width="456" height="350" alt="Welcome">
@@ -37,56 +36,59 @@
     </header>
     <main>
       <section class="advantages">
-                <div class="advantages_header_wrapper">
-                  <h2 class="advantages_header">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</h2>
-                </div>
+                  <h2 class="advantages_header">Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h2>
                   <p class="advantages_text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-                <div class="advantage_row image1">
-                  <article class="advantage-wrapper blue">
-                    <h3 class="advantage_header white">Настоящий городок</h3>
-                    <p class="advantage_number white">&ndash; №1 &ndash;</p>
-                    <p class="advantage_text white">Седона &ndash; не аттракцион для туристов, там течёт своя жизнь</p>
-                  </article>
-
-                </div>
-                <div class="advantage_row">
-                  <article class="advantage-wrapper icon lodging">
-                    <h3 class="advantage_header">Жильё</h3>
-                    <p class="advantage_text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-                  </article>
-                  <article class="advantage-wrapper icon food">
-                    <h3 class="advantage_header">Еда</h3>
-                    <p class="advantage_text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-                  </article>
-                  <article class="advantage-wrapper icon souvenirs">
-                    <h3 class="advantage_header">Сувениры</h3>
-                    <p class="advantage_text">Не только китайского, но и местного производства!</p>
-                  </article>
-                </div>
-                <div class="advantage_row image2 right">
-                  <article class="advantage-wrapper blue">
-                    <h3 class="advantage_header white">Там есть <br>мост дьявола</h3>
-                    <p class="advantage_number white">&ndash; №2 &ndash;</p>
-                    <p class="advantage_text white">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-                  </article>
-                </div>
-                <div class="advantage_row">
-                  <article class="advantage-wrapper">
-                    <h3 class="advantage_header">Небольшая площадь</h3>
-                    <p class="advantage_number">&ndash; №3 &ndash;</p>
-                    <p class="advantage_text">Все достопримечательности находятся очень близко</p>
-                  </article>
-                  <article class="advantage-wrapper">
-                    <h3 class="advantage_header">Красивая дорога</h3>
-                    <p class="advantage_number">&ndash; №4 &ndash;</p>
-                    <p class="advantage_text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-                  </article>
-                  <article class="advantage-wrapper">
-                    <h3 class="advantage_header">Мало туристов</h3>
-                    <p class="advantage_number">&ndash; №5 &ndash;</p>
-                    <p class="advantage_text">Большинство едет в Гранд Каньон и толпится там</p>
-                  </article>
-                </div>
+                  <ul class="advantages_list">
+                      <li class="advantages_item">
+                          <div class="advantage_item_wrapper_blue">
+                            <h3 class="advantage_header white">Настоящий городок</h3>
+                            <p class="advantage_number white">&ndash; №1 &ndash;</p>
+                            <p class="advantage_text white">Седона &ndash; не аттракцион для туристов, там течёт своя жизнь</p>
+                          </div>
+                            <ul class="advantages_item_sublist">
+                              <li class="advantage_item_wrapper icon lodging">
+                                <h3 class="advantage_header">Жильё</h3>
+                                <p class="advantage_text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                              </li>
+                              <li class="advantage_item_wrapper icon food">
+                                <h3 class="advantage_header">Еда</h3>
+                                <p class="advantage_text">Всегда заказывайте фирменный бургер, <br>вы не разочаруетесь!</p>
+                              </li>
+                              <li class="advantage_item_wrapper icon souvenirs">
+                                <h3 class="advantage_header">Сувениры</h3>
+                                <p class="advantage_text">Не только китайского, но и местного производства!</p>
+                              </li>
+                            </ul>
+                        </li>
+                        <li class="advantages_item">
+                          <div class="advantage_item_wrapper_blue_left">
+                              <h3 class="advantage_header white">Там есть <br>мост дьявола</h3>
+                              <p class="advantage_number white">&ndash; №2 &ndash;</p>
+                              <p class="advantage_text white">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                          </div>
+                        </li>
+                        <li class="advantages_item">
+                          <div class="advantage_item_wrapper advantage_item_wrapper_neutral">
+                            <h3 class="advantage_header">Небольшая площадь</h3>
+                            <p class="advantage_number">&ndash; №3 &ndash;</p>
+                            <p class="advantage_text">Все достопримечательности <br>находятся очень близко</p>
+                          </div>
+                        </li>
+                        <li class="advantages_item">
+                          <div class="advantage_item_wrapper advantage_item_wrapper_neutral">
+                            <h3 class="advantage_header">Красивая дорога</h3>
+                            <p class="advantage_number">&ndash; №4 &ndash;</p>
+                            <p class="advantage_text">Ехать в Седону из Лас-Вегаса совсем <br>не скучно!</p>
+                          </div>
+                        </li>
+                        <li class="advantages_item">
+                          <div class="advantage_item_wrapper advantage_item_wrapper_neutral">
+                            <h3 class="advantage_header">Мало туристов</h3>
+                            <p class="advantage_number">&ndash; №5 &ndash;</p>
+                            <p class="advantage_text">Большинство едет в Гранд Каньон <br>и толпится там</p>
+                          </div>
+                        </li>
+                      </ul>
       </section>
       <section class="dates">
                 <h2 class="dates_header">Заинтересовались?</h2>
@@ -98,7 +100,7 @@
       </section>
     </main>
     <footer class="footer">
-          <div class="container">
+          <div class="footer_wrapper">
                 <section class="footer_contacts">
                   <p class="visit_Sedona">#VisitSedona
                   тел:&nbsp;+7(495)666-02-66</p>
@@ -186,5 +188,6 @@
         </div>
       </form>
     </div>
+  </div>
   </body>
 </html>

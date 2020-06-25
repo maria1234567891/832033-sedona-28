@@ -8,42 +8,40 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page_body">
+    <div class="container">
     <header class="header">
-      <div class="container">
-        <div class="logo_Sedona_container">
-          <a href="index.html">
-            <img src="img/logo_Sedona.svg" width="138" height="70" alt="Логотип City of Sedona">
-          </a>
-        </div>
-        <nav class="main_navigation">
-          <ul class="site_navigation">
-            <li class="align_left"><a href="index.html" class="menu">Информация</a></li>
-            <li class="align_left"><a href="" class="menu">Фото и видео</a></li>
-            <li class="align_right"><a href="" class="menu">Карта штата</a></li>
-            <li class="align_right"><a href="" class="menu active">Гостиницы</a></li>
-          </ul>
-        </nav>
+      <div class="logo_Sedona_container">
+        <a href="index.html">
+          <img src="img/logo_Sedona.svg" width="138" height="70" alt="Логотип City of Sedona">
+        </a>
       </div>
+      <nav class="main_navigation">
+        <ul class="site_navigation">
+          <li class="site_navigation_align_left"><a href="index.html">Информация</a></li>
+          <li class="site_navigation_align_left"><a href="">Фото и видео</a></li>
+          <li class="site_navigation_align_right"><a href="">Карта штата</a></li>
+          <li class="site_navigation_align_right"><a>Гостиницы</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section class="hotel_form">
-        <div class="container">
           <form action="https://echo.htmlacademy.ru" method="post" class="filter">
             <fieldset class="fieldset">
               <legend class="legend">Инфраструктура:</legend>
-              <input id="swimmingpool" name="swimmingpool" type="checkbox" class="filter_input_checkbox visually_hidden"><label for="swimmingpool" class="legend_label">Бассейн</label>
-              <input id="parking" name="parking" type="checkbox" class="filter_input_checkbox visually_hidden" checked><label for="parking" class="legend_label">Парковка</label>
+              <input id="swimmingpool" name="swimmingpool" type="checkbox" class="filter_input_checkbox visually_hidden" checked><label for="swimmingpool" class="legend_label">Бассейн</label>
+              <input id="parking" name="parking" type="checkbox" class="filter_input_checkbox visually_hidden"><label for="parking" class="legend_label">Парковка</label>
               <input id="wifi" name="wifi" type="checkbox" class="filter_input_checkbox visually_hidden"><label for="wifi" class="legend_label">WiFi</label>
             </fieldset>
             <fieldset class="fieldset">
               <legend class="legend">Тип жилья:</legend>
-              <input id="hotel" name="hotel" type="checkbox" class="filter_input_checkbox visually_hidden" disabled checked><label for="hotel" class="legend_label">Гостиница</label>
-              <input id="motel" name="motel" type="checkbox" class="filter_input_checkbox visually_hidden" disabled><label for="motel" class="legend_label">Мотель</label>
-              <input id="apartments" name="apartments" type="checkbox" class="filter_input_checkbox visually_hidden"><label for="apartments" class="legend_label">Апартаменты</label>
+              <input id="hotel" name="hotel" type="checkbox" class="filter_input_checkbox visually_hidden" checked><label for="hotel" class="legend_label">Гостиница</label>
+              <input id="motel" name="motel" type="checkbox" class="filter_input_checkbox visually_hidden" checked><label for="motel" class="legend_label">Мотель</label>
+              <input id="apartments" name="apartments" type="checkbox" class="filter_input_checkbox visually_hidden" checked><label for="apartments" class="legend_label">Апартаменты</label>
             </fieldset>
             <div class="ranges_submit_wrapper">
             <fieldset class="fieldset">
-              <legend class="legend">Стоимость в сутки (Р):</legend>
+              <legend class="legend_price">Стоимость в сутки (Р):</legend>
               <div class="range_filter">
                 <div class="price_controls">
                   <label class="min_price">
@@ -65,10 +63,8 @@
             <button type="submit" class="submit_hotels">Показать</button>
           </div>
           </form>
-        </div>
       </section>
       <section class="hotels">
-        <div class="container">
           <div class="results">
             <h3 class="results_header">Найдено: 3</h3>
             <div class="sort_container">
@@ -165,11 +161,10 @@
               </article>
             </li>
           </ul>
-        </div>
       </section>
     </main>
     <footer class="footer">
-          <div class="container">
+          <div class="footer_wrapper">
                 <section class="footer_contacts">
                   <p class="visit_Sedona">#VisitSedona
                   тел:&nbsp;+7(495)666-02-66</p>
@@ -208,5 +203,6 @@
                 </section>
             </div>
     </footer>
+  </div>
   </body>
 </html>

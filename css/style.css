@@ -10,6 +10,7 @@
   --basic_brown_active: #503E33;
   --basic_white: #ffffff;
   --basic_neutral: #F2F2F2;
+  --basic_neutral_advantages: #EEEEEE;
   --basic_neutral_hover: #EBEBEB;
   --basic_neutral_border: #E5E5E5;
   --basic_neutral_active: #BDBBBC;
@@ -30,21 +31,24 @@ body{
   font-weight: 400;
   color: var(--basic_text);
   text-transform: uppercase;
-  background-color: var(--basic_neutral_active);
+  background-color: var(--basic_neutral);
 }
 .page{
   height: 100%;
 }
 .page_body{
   min-height: 100%;
+  position: relative;
+}
+.page_body .container{
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
 .container{
-  width: 1054px;
+  width: 1200px;
   margin: 0 auto;
-  padding: 0 73px;
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.3);
 }
 a{
   text-decoration: none;
@@ -70,22 +74,8 @@ input[type="checkbox"].visually_hidden {
 }
 .header{
   text-align: center;
-  width: 1200px;
-  margin: 0 auto;
   background-color: var(--basic_white);
-}
-.header_Sedona img{
-  padding-top: 76px;
-  padding-bottom: 70px;
-}
-.header_Sedona_container{
   position: relative;
-  z-index: 0;
-}
-.mask{
-  position: absolute;
-  bottom: 0;
-  height: 57px;
 }
 .logo_Sedona_container{
   position: absolute;
@@ -93,49 +83,80 @@ input[type="checkbox"].visually_hidden {
   margin-left: -69px;
   z-index: 100;
 }
-.logo_Sedona{
-  position: relative;
-  margin: 0 auto;
-}
 .main_navigation{
-  background-color: var(--basic_white);
+  width: 1054px;
+  margin: 0 auto;
+  font-weight: 700;
 }
 .site_navigation{
   list-style: none;
   margin: 0 auto;
   padding: 0px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .site_navigation li{
-  width: 227px;
-  padding: 14px 0px;
-  justify-self: start;
+  width: 228px;
+  padding: 0px;
+  padding-top: 15px;
+  padding-bottom: 16px;
 }
 .site_navigation li:nth-child(3){
   margin-left: auto;
 }
-.align_left{
+.site_navigation_align_left{
   text-align: left;
 }
-.align_right{
+.site_navigation_align_right{
   text-align: right;
 }
-.menu{
-  font-weight: 700;
+.site_navigation a:not([href]){
+  color: var(--basic_brown);
+}
+.site_navigation a{
   color: var(--basic_black);
 }
-.menu:hover{
+.site_navigation a:hover{
   color: var(--basic_blue);
 }
-.menu:focus{
+.site_navigation a:focus{
   color: var(--basic_blue_hover);
 }
-.menu:active{
+.site_navigation a:active{
   color: var(--basic_black_transparent);
 }
-.active{
-  color: var(--basic_brown);
+.header_Sedona{
+  background-color: var(--basic_background_Sedona);
+  background-image: url("../img/background_photo.jpg");
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.header_Sedona img{
+  padding-top: 78px;
+  padding-bottom: 73px;
+}
+.header_Sedona_container{
+  position: relative;
+  z-index: 0;
+}
+.mask{
+  position: absolute;
+  bottom: 0px;
+  height: 57px;
+}
+.hotel_form{
+  background-color: var(--basic_background_Sedona);
+  background-image: url("../img/background_filter.jpg");
+  width: 1200px;
+  min-height: 217px;
+  margin: 0 auto;
+}
+.filter{
+  display: flex;
+  width: 1054px;
+  margin: 0 auto;
 }
 .icons{
   margin-left: auto;
@@ -165,27 +186,10 @@ input[type="checkbox"].visually_hidden {
 .active_icon > svg > path{
   fill: var(--basic_blue);
 }
-.header_Sedona{
-  background-color: var(--basic_background_Sedona);
-  background-image: url("../img/background_photo.jpg");
-  background-position: top center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-.hotel_form{
-  background-color: var(--basic_background_Sedona);
-  background-image: url("../img/background_filter.jpg");
-  width: 1200px;
-  min-height: 217px;
-  margin: 0 auto;
-}
-.hotel_form form{
-  display: flex;
-}
 .fieldset{
   padding: 0;
   margin: 0;
-  margin-right: 119px;
+  margin-right: 65px;
   display: flex;
   border: none;
 }
@@ -199,6 +203,14 @@ input[type="checkbox"].visually_hidden {
   color: var(--basic_white);
   padding-top: 26px;
   padding-bottom: 24px;
+}
+.legend_price{
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--basic_white);
+  padding-top: 25px;
+  padding-bottom: 10px;
 }
 .legend_label{
   font-size: 14px;
@@ -224,12 +236,15 @@ input[type="checkbox"].visually_hidden {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
+.filter_input_checkbox:checked + label::before {
+  background-image: none;
+}
 .filter_input_checkbox:checked + label::after {
   content: "";
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 23px;
+  width: 27px;
   height: 23px;
   background-image: url("../img/checkbox_on.svg");
   background-repeat: no-repeat;
@@ -305,8 +320,8 @@ input[type="checkbox"].visually_hidden {
   border: 2px solid #FFFFFF;
   box-sizing: border-box;
   border-radius: 2px;
-  padding-top: 7px;
-  padding-bottom: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: transparent;
 }
 .price_controls input {
@@ -347,8 +362,8 @@ input[type="checkbox"].visually_hidden {
   border: 2px solid #FFFFFF;
   box-sizing: border-box;
   border-radius: 2px;
-  padding-top: 7px;
-  padding-bottom: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: transparent;
   margin: 0 auto;
 }
@@ -362,7 +377,8 @@ input[type="checkbox"].visually_hidden {
 }
 .results{
   padding: 0;
-  margin: 0;
+  width: 1054px;
+  margin: 0 auto;
   padding-top: 34px;
   padding-bottom: 67px;
   display: grid;
@@ -419,23 +435,21 @@ input[type="checkbox"].visually_hidden {
 .advantages{
   text-align: center;
   width: 1200px;
-  margin: 0 auto;
-}
-.advantages_header_wrapper{
-  margin: 0 auto;
-  padding-top: 39px;
-  padding-bottom: 43px;
   background-color: var(--basic_white);
 }
 .advantages_header{
   width: 470px;
   font-size: 21px;
+  line-height: 26px;
+  color: var(--basic_black);
   margin: 0 auto;
+  padding-top: 42px;
+  padding-bottom: 43px;
 }
 .advantages_text{
-  margin: 0px;
-  padding-bottom: 37px;
-  background-color: var(--basic_white);
+  margin: 0 auto;
+  width: 700px;
+  padding-bottom: 52px;
 }
 .advantage_header{
   font-size: 21px;
@@ -457,33 +471,60 @@ input[type="checkbox"].visually_hidden {
 .advantage_text{
   font-size: 14px;
   line-height: 21px;
-  width: 297px;
+  width: 310px;
   margin: 0 auto;
   padding: 0;
   padding-top: 25px;
   padding-bottom: 54px;
   color: var(--basic_text);
 }
-.advantage-wrapper{
+.advantage_item_wrapper{
   width: 400px;
   background-color: var(--basic_white);
+}
+.advantage_item_wrapper_neutral{
+  background-color: var(--basic_neutral_advantages);
+}
+.icon .advantage_text{
+  padding-bottom: 82px;
+}
+.advantages_list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.advantages_item_sublist{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 1200px;
+  display: flex;
 }
 .advantage_row{
   width: 1200px;
   display: flex;
 }
-.image1{
-  background-image: url("../img/image1.jpg");
-  background-position: right;
-}
-.image2{
-  background-image: url("../img/image2.jpg");
-  /* background-position: right; */
-}
 .white{
   color: var(--basic_white);
 }
-.blue{
+.advantage_item_wrapper_blue{
+  width: 400px;
+  box-sizing: padding-box;
+  padding-right: 800px;
+  background-image: url("../img/image1.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: var(--basic_blue);
+}
+.advantage_item_wrapper_blue_left{
+  width: 400px;
+  box-sizing: padding-box;
+  padding-left: 800px;
+  background-image: url("../img/image2.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
   background-color: var(--basic_blue);
 }
 .icon{
@@ -510,7 +551,7 @@ input[type="checkbox"].visually_hidden {
   top: 60px;
   width: 75px;
   height: 72px;
-  background-image: url("../img/icon_2.svg");
+  background-image: url("../img/icon_3.svg");
 }
 .souvenirs::before{
   content: "";
@@ -520,28 +561,29 @@ input[type="checkbox"].visually_hidden {
   top: 60px;
   width: 75px;
   height: 72px;
-  background-image: url("../img/icon_3.svg");
+  background-image: url("../img/icon_2.svg");
 }
 .right{
   justify-content: flex-end;
 }
 .dates{
   text-align: center;
-  line-height: 24px;
   width: 1200px;
-  margin: 0 auto;
+  background-color: var(--basic_white);
 }
 .dates_header{
   margin: 0px;
   padding: 0px;
   font-size: 30px;
-  padding-top: 58px;
-  background-color: var(--basic_white);
+  line-height: 24px;
+  padding-top: 56px;
 }
 .dates_p{
+  font-size: 14px;
+  line-height: 24px;
   margin: 0px;
   padding: 0px;
-  padding-top: 27px;
+  padding-top: 32px;
   padding-bottom: 45px;
   background-color: var(--basic_white);
 }
@@ -549,7 +591,6 @@ input[type="checkbox"].visually_hidden {
   width: 1200px;
   min-height: 594px;
   background-image: url(../img/map.png);
-  margin-top: -86px;
   position: relative;
   z-index: 10;
   margin-bottom: -120px;
@@ -565,8 +606,8 @@ input[type="checkbox"].visually_hidden {
   line-height: 24px;
   width: 568px;
   margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 31px;
+  padding-bottom: 31px;
   display: block;
   background-color: var(--basic_brown);
 }
@@ -579,12 +620,15 @@ input[type="checkbox"].visually_hidden {
 }
 .footer {
   background-color: var(--basic_white_transparent2);
+  width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 120;
   min-height: 120px;
+
 }
-.footer .container{
+.footer_wrapper{
+  width: 1054px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 328px 398px 328px;
@@ -666,7 +710,8 @@ input[type="checkbox"].visually_hidden {
 .hotels_list{
   list-style: none;
   padding: 0;
-  margin: 0;
+  width: 1054px;
+  margin: 0 auto;
   background-color: var(--basic_white);
 }
 .hotels_item{
@@ -795,7 +840,7 @@ input[type="checkbox"].visually_hidden {
   background-color: var(--basic_white);
   margin: 0 auto;
   position: absolute;
-  top: 2100px;
+  top: 2170px;
   left: 50%;
   margin-left: -284px;
   z-index: 200;
@@ -805,7 +850,6 @@ input[type="checkbox"].visually_hidden {
 }
 .form input{
   font: inherit;
-  color: var(--basic_black);
   text-transform: uppercase;
   border: none;
   background-color: var(--basic_neutral);
@@ -843,6 +887,9 @@ input[type="checkbox"].visually_hidden {
   margin-bottom: 29px;
   position: relative;
 }
+.arrival_container input{
+  color: var(--basic_black);
+}
 .departure_container{
   display: flex;
   margin: 0;
@@ -878,7 +925,6 @@ input[type="checkbox"].visually_hidden {
 }
 .arrival_date_input, .departure_date_input{
   width: 346px;
-  color: inherit;
 }
 .arrival_container > svg{
   position: absolute;
@@ -889,6 +935,9 @@ input[type="checkbox"].visually_hidden {
   position: absolute;
   right: 9px;
   top: 7px;
+}
+.arrival_container{
+  color: var(--basic_black);
 }
 .arrival_container > svg:hover > path{
   fill: var(--basic_black);
