@@ -391,7 +391,7 @@ input[type="checkbox"].visually_hidden {
   padding: 0;
   width: 1054px;
   margin: 0 auto;
-  padding-top: 34px;
+  padding-top: 23px;
   padding-bottom: 67px;
   display: grid;
   grid-template-columns: 135px 1fr;
@@ -637,7 +637,6 @@ input[type="checkbox"].visually_hidden {
   position: relative;
   z-index: 120;
   min-height: 120px;
-
 }
 .footer_wrapper{
   width: 1054px;
@@ -647,7 +646,7 @@ input[type="checkbox"].visually_hidden {
 }
 .visit_Sedona{
   margin: 0 auto;
-  margin-top: 21px;
+  margin-top: 20px;
   margin-bottom: 36px;
   width: 222px;
   text-align: center;
@@ -695,11 +694,9 @@ input[type="checkbox"].visually_hidden {
 }
 .copyright_container{
   display: flex;
-  /* justify-content: flex-end; */
 }
 .copyright_wrapper{
   margin: 0 auto;
-  margin-top: 28px;
   display: flex;
   align-items: center;
 }
@@ -733,7 +730,7 @@ input[type="checkbox"].visually_hidden {
   gap: 28px;
 }
 .item_information{
-  margin-bottom: 61px;
+  margin-bottom: 60px;
 }
 .hotel_item_header{
   font-size: 21px;
