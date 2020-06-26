@@ -5,6 +5,7 @@ var arrival_date = document.querySelector(".arrival_date_input");
 var departure_date = document.querySelector(".departure_date_input");
 var adults_input = document.querySelector(".adults_input");
 var children_input = document.querySelector(".children_input");
+var body = document.querySelector(".page_body");
 var isStorageSupport = true;
 var storage_adults = "";
 var storage_children = "";
@@ -29,6 +30,16 @@ link.addEventListener("click", function (event){
   else{
     popup.classList.add("hidden");
   }
+});
+body.addEventListener("click", function (evt){
+  if(!popup.classList.contains("hidden")){
+      if(evt.target != link){
+      popup.classList.add("hidden");
+    }
+  }
+});
+popup.addEventListener("click", function (evt){
+  evt.stopPropagation();
 });
 form.addEventListener("submit", function(evt){
   if( !arrival_date.value || !departure_date.value || !adults_input.value || !children_input.value){
