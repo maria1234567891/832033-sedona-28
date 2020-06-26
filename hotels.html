@@ -17,7 +17,7 @@
       </div>
       <nav class="main_navigation">
         <ul class="site_navigation">
-          <li class="site_navigation_align_left"><a href="index.html">Информация</a></li>
+          <li class="site_navigation_align_left"><a href="">Информация</a></li>
           <li class="site_navigation_align_left"><a href="">Фото и видео</a></li>
           <li class="site_navigation_align_right"><a href="">Карта штата</a></li>
           <li class="site_navigation_align_right"><a>Гостиницы</a></li>
@@ -32,7 +32,7 @@
               <legend class="legend">Инфраструктура:</legend>
               <input id="swimmingpool" name="swimmingpool" type="checkbox" class="filter_input_checkbox visually_hidden" checked><label for="swimmingpool" class="legend_label">Бассейн</label>
               <input id="parking" name="parking" type="checkbox" class="filter_input_checkbox visually_hidden"><label for="parking" class="legend_label">Парковка</label>
-              <input id="wifi" name="wifi" type="checkbox" class="filter_input_checkbox visually_hidden"><label for="wifi" class="legend_label">Wi-Fi</label>
+              <input id="wifi" name="wifi" type="checkbox" class="filter_input_checkbox visually_hidden"><label for="wifi" class="legend_label">WiFi</label>
             </fieldset>
             <fieldset class="fieldset">
               <legend class="legend">Тип жилья:</legend>
@@ -46,11 +46,11 @@
               <div class="range_filter">
                 <div class="price_controls">
                   <label class="min_price">
-                    от <input type="number" name="main_navigationprice" value="0">
+                    <div>от </div><input type="number" name="main_navigationprice" value="0">
                   </label>
                   <div class="divider"></div>
                   <label class="max_price">
-                    до <input type="number" name="max_price" value="3000">
+                    <div>до </div><input type="number" name="max_price" value="3000">
                   </label>
                 </div>
               </div>
@@ -68,7 +68,7 @@
       </section>
       <section class="hotels">
           <div class="results">
-            <h3 class="results_header">Найдено: 3</h3>
+            <h3 class="results_header">Найдено:3</h3>
             <div class="sort_container">
               <h4 class="sort_header">Сортировка:</h4>
               <ul class="sort">
@@ -164,13 +164,11 @@
     </main>
     <footer class="footer">
           <div class="footer_wrapper">
-                <section class="footer_contacts">
-                  <h2 class="visually_hidden">Контакты</h2>
-                  <p class="visit_Sedona">#VisitSedona
-                  тел:&nbsp;+7(495)666-02-66</p>
-                </section>
-                <section class="social_buttons_container">
-                  <h2 class="visually_hidden">Социальные сети</h2>
+                <div class="footer_contacts">
+                  <p class="visit_Sedona">#VisitSedona</p>
+                  <p class="visit_Sedona_tel">тел:&nbsp;+7(495)666-02-66</p>
+                </div>
+                <div class="social_buttons_container">
                   <ul class="social_buttons">
                     <li><a href="#" class="social_button twitter">
                       <span class="visually-hidden">Твиттер</span>
@@ -191,7 +189,7 @@
                       </svg>
                     </a></li>
                   </ul>
-                </section>
+                </div>
                 <div class="copyright_container">
                   <div class="copyright_wrapper">
                     <p class="copyright">Website by</p>
