@@ -189,25 +189,25 @@ input[type="checkbox"].visually_hidden {
 .icon_up{
   margin-right: 11px;
 }
-.icon_up > svg > path{
+.icon_up path{
   fill: var(--basic_black_transparent);
 }
-.icon_down > svg > path{
+.icon_down path{
   fill: var(--basic_black_transparent);
 }
-.icon_down:hover > svg > path{
+.icon_down:hover path{
   fill: var(--basic_black);
 }
-.icon_up:hover > svg > path{
+.icon_up:hover path{
   fill: var(--basic_black);
 }
-.icon_down:active > svg > path{
+.icon_down:active path{
   fill: var(--basic_blue);
 }
-.icon_up:active > svg > path{
+.icon_up:active path{
   fill: var(--basic_blue);
 }
-.active_icon > svg > path{
+.active_icon path{
   fill: var(--basic_blue);
 }
 .fieldset{
@@ -743,10 +743,10 @@ input[type="checkbox"].visually_hidden {
 .twitter:active > img{
   opacity: 0.3;
 }
-.facebook:active > svg > g{
+.facebook:active g{
   opacity: 0.3;
 }
-.youtube:active > svg > path{
+.youtube:active path{
   opacity: 0.3;
 }
 .copyright_container{
@@ -1036,16 +1036,16 @@ input[type="checkbox"].visually_hidden {
 .arrival_container{
   color: var(--basic_black);
 }
-.arrival_container > svg:hover > path{
+.arrival_svg:hover > path{
   fill: var(--basic_black);
 }
-.arrival_container > svg:active > path{
+.arrival_svg:active > path{
   fill: var(--basic_blue);
 }
-.departure_container > svg:hover > path{
+.departure_svg:hover > path{
   fill: var(--basic_black);
 }
-.departure_container > svg:active > path{
+.departure_svg:active > path{
   fill: var(--basic_blue);
 }
 .submit{
