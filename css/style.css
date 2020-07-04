@@ -46,8 +46,6 @@ body{
 .page_body{
   min-height: 100%;
   position: relative;
-  display: flex;
-  align-items: stretch;
 }
 .container{
   min-height: 100%;
@@ -684,16 +682,10 @@ input[type="checkbox"].visually_hidden {
   background-color: var(--basic_brown_active);
   color: var(--basic_white_transparent);
 }
-main{
-  margin-bottom: 120px;
-}
 .footer {
   background-color: var(--basic_white_transparent2);
   width: 1200px;
   margin: 0 auto;
-  padding-top: -120px;
-  position: absolute;
-  bottom: 0;
   z-index: 120;
   min-height: 120px;
 }
